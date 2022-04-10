@@ -5,7 +5,7 @@ MFBPP: A CNN and Bi-LSTM-based Method for Multi-functional Bioactive Peptide Pre
 
 # Dataset
 
-![image](https://github.com/Good-Ly/MFBPP/blob/main/figures/dataset.jpg)
+
 
 # installation
 - python==3.7.11
