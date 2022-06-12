@@ -432,7 +432,7 @@ print(y_train.shape)
 print(test[0].shape)
 print(test[1].shape)
 
-def MFBPP(length, out_length, para):
+def MPMABP(length, out_length, para):
     ed = para['embedding_dimension']
     ps = para['pool_size']
     fd = para['fully_dimension']
@@ -497,7 +497,7 @@ dp = 0.5
 lr = 0.001
 para = {'embedding_dimension': ed, 'pool_size': ps, 'fully_dimension': fd,
         'drop_out': dp, 'learning_rate': lr}
-model = MFBPP(length, out_length, para)
+model = MPMABP(length, out_length, para)
 
 #model.fit(X_train, y_train, nb_epoch = 34, batch_size = 30, verbose = 2)#3
 #each_model = os.path.join(model_path, 'Independently_tested_model' + '.h5')
@@ -521,7 +521,7 @@ Acc = []
 Abs_true = []
 Abs_false = []
 for train_index, test_index in kf.split(X_train):
-    #model_for_5cros_val = MFBPP(length, out_length, para)
+    #model_for_5cros_val = MPMABP(length, out_length, para)
     print("********************     model %d  *****************"%(num_model))
     #model_for_5cros_val.fit(X_train[train_index], y_train[train_index], nb_epoch = 34, batch_size = 30, verbose=2)
     #each_model = os.path.join(model_path, "model"+ str(num_model) + '_5_cross_val.h5')
