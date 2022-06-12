@@ -199,11 +199,11 @@ def predict(X_test, y_test, thred, para, weights, jsonFiles, h5_model, dir):
     for ii in range(0, len(weights)):
         # 1.loading weight and structure (model)
 
-        # json_file = open('MFBPP_model/' + jsonFiles[i], 'r')
+        # json_file = open('MPMABP_model/' + jsonFiles[i], 'r')
         # model_json = json_file.read()
         # json_file.close()
         # load_my_model = model_from_json(model_json)
-        # load_my_model.load_weights('MFBPP_model/' + weights[i])
+        # load_my_model.load_weights('MPMABP_model/' + weights[i])
         # load_my_model.compile(loss='binary_crossentropy', optimizer=adam, metrics=['accuracy'])
 
         h5_model_path = os.path.join(dir, h5_model[ii])
@@ -234,7 +234,7 @@ def predict(X_test, y_test, thred, para, weights, jsonFiles, h5_model, dir):
 
     score_label = score_label / len(h5_model)
      # data saving
-    with open(os.path.join(dir, 'MLBP_prediction_prob.pkl'), 'wb') as f:
+    with open(os.path.join(dir, 'MPMABP_prediction_prob.pkl'), 'wb') as f:
         pickle.dump(score_label, f)
     
     # getting prediction label
@@ -244,7 +244,7 @@ def predict(X_test, y_test, thred, para, weights, jsonFiles, h5_model, dir):
             else: score_label[i][j] = 1
 
     # data saving
-    with open(os.path.join(dir, 'MLBP_prediction_label.pkl'), 'wb') as f:
+    with open(os.path.join(dir, 'MPMABP_prediction_label.pkl'), 'wb') as f:
         pickle.dump(score_label, f)
     
 
