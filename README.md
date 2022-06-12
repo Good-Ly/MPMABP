@@ -1,4 +1,4 @@
-# MFBPP
+# MPMABP
 MPMABP: A CNN and Bi-LSTM-Based Method for Predicting Multi-Activities of Bioactive Peptides
 
 **Abstract:** Bioactive peptides are typically small functional peptides with 2–20 amino acid residues
