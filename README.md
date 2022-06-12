@@ -16,3 +16,6 @@ MFBPP: A CNN and Bi-LSTM-based Method for Multi-functional Bioactive Peptide Pre
 
 ## MFBPP_model
 https://drive.google.com/drive/folders/10oPJ_koydNV4Cw_BjpwLtiLq7CpaNlGN?usp=sharing
+
+## Citation
+Li, Y.; Li, X.; Liu, Y.; Yao, Y.; Huang, G. MPMABP: A CNN and Bi-LSTM-Based Method for Predicting Multi-Activities of Bioactive Peptides. Pharmaceuticals 2022, 15, 707. https://doi.org/10.3390/ph15060707
