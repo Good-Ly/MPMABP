@@ -372,7 +372,7 @@ def GetData(path):
 
     return sequence_data
 
-dir = 'MFBPP_model'
+dir = 'MPMABP_model'
 Path(dir).mkdir(exist_ok=True)
 model_path = dir
 Path(model_path).mkdir(exist_ok=True)
