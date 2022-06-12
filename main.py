@@ -19,10 +19,10 @@ from sklearn.metrics import f1_score,accuracy_score,recall_score,precision_score
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 os.environ['KERAS_BACKEND']='tensorflow'
 np.random.seed(101)
-# 设置自增长
+
 config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
-# 设置到keras 中去
+
 K.tensorflow_backend.set_session(tf.Session(config=config))
 
 # -*- coding: utf-8 -*-
@@ -388,7 +388,7 @@ tr_seq_data,te_seq_data,tr_seq_label,te_seq_label = \
 
 
 
-#  训练测试数据
+
 tr_data = tr_seq_data
 tr_label = tr_seq_label
 te_data = te_seq_data
@@ -397,7 +397,7 @@ te_label = te_seq_label
 train = [tr_data, tr_label]
 test = [te_data, te_label]
 
-# 训练集数据清洗  去重
+
 X_train, y_train = train[0], train[1]
 
 # data and label preprocessing
@@ -416,7 +416,7 @@ y_train = y_train[index]
 length = X_train.shape[1]
 out_length = y_train.shape[1]
 
-#测试集数据清洗  去重
+
 test[1] = keras.utils.to_categorical(test[1]) # test_data
 test[0], temp = catch(test[0], test[1])
 temp[temp > 1] = 1
@@ -489,8 +489,7 @@ def MFBPP(length, out_length, para):
     return model
 
 
-#model_num = 1 # model number
-# parameters
+
 ed = 100
 ps = 3
 fd = 64
